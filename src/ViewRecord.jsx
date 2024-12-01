@@ -6,7 +6,7 @@ const ViewRecord = ({ data = [],  openCreateModal, fetchStudents }) => {
 
     const handleDelete = async (studentId) => {
         try {
-            const response = await fetch(`http://127.0.0.1:5000/delete_record/${studentId}`, { method: "DELETE" });
+            const response = await fetch(`https://spp-xzzh.onrender.com/delete_record/${studentId}`, { method: "DELETE" });
             const data = await response.json();
             if (response.ok) {
                 console.log("Record deleted:", data.message);
@@ -25,7 +25,7 @@ const ViewRecord = ({ data = [],  openCreateModal, fetchStudents }) => {
 
     const handlePredict = async (studentId) => {
         try {
-            const response = await fetch(`http://127.0.0.1:5000/predict/${studentId}`, { method : 'GET' });
+            const response = await fetch(`https://spp-xzzh.onrender.com/predict/${studentId}`, { method : 'GET' });
             const predictionData = await response.json();
             console.log('Prediction Data:', predictionData);
             openCreateModal(predictionData.prediction);

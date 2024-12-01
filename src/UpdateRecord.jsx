@@ -27,7 +27,7 @@ const UpdateRecord = ({ fetchStudents }) => {
   useEffect(() => {
     const fetchStudentDetails = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:5000/view_record/${id}`);
+        const response = await fetch(`https://spp-xzzh.onrender.com/view_record/${id}`);
         const data = await response.json();
         setFormData(data.student); // Ensure `data.student` contains the object with matching keys
       } catch (error) {
@@ -46,7 +46,7 @@ const UpdateRecord = ({ fetchStudents }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://127.0.0.1:5000/update_student_record/${id}`, {
+      const response = await fetch(`https://spp-xzzh.onrender.com/update_student_record/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

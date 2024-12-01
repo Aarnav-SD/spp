@@ -42,7 +42,7 @@ const CreateRecord = ({ fetchStudents }) => {
             distanceFromHome
         };
 
-        const url = "http://127.0.0.1:5000/create";
+        const url = "https://spp-xzzh.onrender.com/create";
         const options = {
             method: 'POST',
             headers: {

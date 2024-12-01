@@ -17,7 +17,7 @@ function App() {
   const [modalContent, setModalContent] = useState(null);
 
   const fetchStudents = async () => {
-    const response = await fetch("http://127.0.0.1:5000/view");
+    const response = await fetch("https://spp-xzzh.onrender.com/view");
     const data = await response.json();
     setStudents(data.students);
 };
