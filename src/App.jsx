@@ -41,7 +41,7 @@ useEffect(() => {
   return (
     <Router>
         <Routes>
-            <Route path="/" element={<Welcome data={students} />} />
+            <Route path="/" element={<Welcome />} />
             <Route path="/create" element={<CreateRecord fetchStudents={fetchStudents} />} />
             <Route path="/view" element={<ViewRecord data={students} openCreateModal={openCreateModal} fetchStudents={fetchStudents} />} />
             <Route path="/update_student_record/:id" element={<UpdateRecord fetchStudents={fetchStudents} />} />
