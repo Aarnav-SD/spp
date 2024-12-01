@@ -13,7 +13,7 @@ def view_student_record(id):
     return jsonify({'student': student.to_dict()}), 200
 
 
-@app.route('/Welcome', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def action():
     if request.method == 'POST':
       
